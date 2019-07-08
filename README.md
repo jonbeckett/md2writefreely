@@ -6,7 +6,7 @@ This python 3.x script will upload a collection of markdown files prepared by [w
 
 Usage:
 
-`python md2write.as.py
+`python md2write.as.py`
 
 (you will need to change the parameters within the script file)
 
