@@ -16,3 +16,5 @@ Usage:
 The script presumes the markdown files will be formatted as per those output by [wp2md](https://github.com/jonbeckett/wp2md) - where the top four lines of each markdown file are the title, a blank line, the date, another blank line, and then the content of the post. The script also presumes that the filenames start with the date in `yyyy-mm-dd` format, and uses it to pass the original post date to the write.as API in order to back-date posts.
 
 It's worth noting that this script was written really for my own purposes (and curiosity) - there are probably lots of ways it can go wrong.
+
+If you would like to see the results of an import, head to [https://write.as/jonbeckett](https://write.as/jonbeckett).
