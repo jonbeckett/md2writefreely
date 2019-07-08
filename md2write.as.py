@@ -26,7 +26,7 @@ from urllib.request import Request, urlopen
 
 print('Authenticating...')
 url = 'https://write.as/api/auth/login'
-data = ('{"alias":"' + username + '","pass":"' + password + '!"}').encode()
+data = ('{"alias":"' + username + '","pass":"' + password + '"}').encode()
 auth_request = Request(url, data)
 auth_request.add_header('Content-Type','application/json')
 auth_response = urlopen(auth_request).read().decode()
