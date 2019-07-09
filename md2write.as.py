@@ -21,6 +21,7 @@ collection_name = "username"
 import os
 import os.path
 import json
+import time
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
@@ -78,4 +79,10 @@ for subdir, dirs, files in os.walk(root_path):
 			post_response = urlopen(post_request).read().decode()
 			
 			# todo - validate the post (check post_response for 201
+			
+			# close the open markdown file
+			markdown_file.close()
+			
+			# wait 1 second (to avoid stressing the API too much)
+			time.sleep(1)
 			
