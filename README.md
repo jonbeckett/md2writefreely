@@ -17,4 +17,4 @@ The script presumes the markdown files will be formatted as per those output by 
 
 It's worth noting that this script was written really for my own purposes (and curiosity) - there are probably lots of ways it can go wrong.
 
-If you would like to see the results of an import, head to [https://write.as/jonbeckett](https://write.as/jonbeckett).
+If you would like to see the results of an import, head to [https://wordsmith.social/jonbeckett](https://wordsmith.social/jonbeckett).
