@@ -1,7 +1,7 @@
-# Script         : Markdown to Write.As Uploader
-#                  Recursively reads a directory containing markdown files, and uploads them to write.as
+# Script         : Markdown to WriteFreely Uploader
+#                  Recursively reads a directory containing markdown files, and uploads them to a writefreely instance
 #                  Designed to work with the output of wp2md (see https://github.com/jonbeckett/wp2md)
-# Author         : Jonathan Beckett (jonbeckett@outlook.com)
+# Author         : Jonathan Beckett (jonathan.beckett@gmail.com)
 # Compatibility  : Python 3.x
 # Pre-Requisites : None
 
@@ -9,13 +9,13 @@
 # path where markdown files reside
 root_path = "c:\\temp\\output"
 
-# write.as credentials
+# writefreely credentials
+writefreely_domain = "write.as"
 username = "username"
 password = "password"
 
 # collection (blog) to post to
 collection_name = "username"
-
 
 # Import modules
 import os
@@ -26,7 +26,7 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 print('Authenticating...')
-url = 'https://write.as/api/auth/login'
+url = 'https://" + writefreely_domain + "/api/auth/login'
 data = ('{"alias":"' + username + '","pass":"' + password + '"}').encode()
 auth_request = Request(url, data)
 auth_request.add_header('Content-Type','application/json')
@@ -64,7 +64,7 @@ for subdir, dirs, files in os.walk(root_path):
 			post_date = year + '-' + month + '-' + day + 'T00:00:00Z';
 			
 			# configure write.as collection API endpoint
-			url = 'https://write.as/api/collections/' + collection_name + '/posts'
+			url = 'https://" + writefreely_domain + "/api/collections/' + collection_name + '/posts'
 			
 			# prepare the data to post to the API
 			data = ({'body':post_body,'title':post_title,'created':post_date})
