@@ -1,12 +1,12 @@
-# md2write.as
+# md2writefreely
 
-## Markdown files to Write.As upload tool for Python 3.x
+## Markdown files to WriteFreely upload tool for Python 3.x
 
-This python 3.x script will upload a collection of markdown files prepared by [wp2md](https://github.com/jonbeckett/wp2md) into a write.as blog.
+This python 3.x script will upload a collection of markdown files prepared by [wp2md](https://github.com/jonbeckett/wp2md) into a writefreely based blog.
 
 Usage:
 
-`python md2write.as.py`
+`python md2writefreely.py`
 
 (you will need to change the parameters within the script file)
 
